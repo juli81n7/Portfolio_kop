@@ -1,0 +1,334 @@
+h1{
+    margin-top: 70px;
+}
+
+.headline_wrapper{
+    height: 700px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 50px;
+    display: none;
+}
+
+.grey_bg{
+    background-color: var(--secondary);
+    border-radius: 1rem;
+}
+
+.indhold{
+    margin-left: 1rem;
+}
+
+.overskrift{
+    border-bottom:  var(--secondary) solid 1.5px;
+    position: sticky;
+    top: 70px;
+    background-color: var(--primary);
+    z-index: 100;
+}
+
+.knapper{
+    display: flex;
+    gap: 1rem;
+}
+
+.overskrift .button_container{
+    margin-right: 1rem;
+}
+
+
+
+
+h2{
+    margin-top: 0rem;
+}
+
+
+
+.overskrift h2{
+    margin-top:1rem;
+}
+
+
+.headline{
+display: flex;
+overflow: hidden;
+
+}
+
+.tema_indhold{
+display: block;
+margin-top: 70px;
+}
+
+
+
+.btn_end{
+display: flex;
+justify-content: center;
+
+}
+
+.btn_end div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+.img_container{
+    margin: 0;
+    height: 400px;
+display: flex;
+justify-content: center;
+
+}
+.video_container{
+    margin: 0;
+    height: 400px;
+display: flex;
+justify-content: center;
+background-color:  var(--secondary);
+border-radius: 1rem;
+overflow: hidden;
+
+}
+.video_container video{
+    width: 80%;
+}
+
+
+.videoInsert2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.videoInsert {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.img_container img{
+    width: 70%;
+    margin: auto;
+    top: 0;
+left: 0;
+}
+
+
+.wireframe img{
+    width: 100%;
+}
+.wireframe_mobil img{
+    width: 140%;
+}
+
+.mockup img{
+width: 120%;
+}
+
+
+.right{
+    margin: 0;
+}
+
+
+
+.text_container{
+    color: var(--primary);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2rem;
+    
+}
+
+
+.text_section h3{
+    margin: 0;
+    font-family: roc-grotesk,sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.right_text p{
+    text-align: right;
+    margin: 0rem;
+}
+
+.text_section{
+    display: flex;
+    justify-content: space-between;
+margin-bottom: 3rem;
+    border-top:  var(--primary) solid 1.5px;
+    margin-right: 2rem;
+    padding-top: 1rem;
+}
+
+
+.img_container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3{
+    margin-top: 0rem;
+}
+
+
+
+.haraki{
+    background-color: #bcdef5;
+}
+
+
+@media (min-width: 800px) {
+
+    .grid_1_1{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+    .grid_2_2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1rem;
+
+    }
+    .grid_1_1_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+
+
+    .img_container{
+        margin: 0;
+    }
+    
+.left{
+margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+    .tema_indhold{
+margin-top: 5rem;
+margin-bottom: 5rem;
+    }
+
+
+
+    .btn_end{
+        margin-bottom: -10rem;
+    }
+    
+
+}
+
+.prototype{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 600px;
+}
+
+.grey_bg .img_container{
+height: 600px;
+}
+
+.next_project{
+    height: 400px;
+display: flex;
+justify-content: space-between;
+gap: 1rem;
+padding: 1rem;
+}
+
+.next_project_container{
+    background-color: var(--secondary);
+    border-radius: 1rem;
+height: 400px;
+width: 100%;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.header_img_projekt{
+    position: inherit;
+    width: 20%;
+  
+  }
+  
+  .download svg{
+    transform: rotate(-135deg);
+
+  }
+
+
+
+
+
+  .item .text_container{
+margin-bottom: 0;
+width: 100%;
+padding-top: 1rem;
+  }
+
+  h1{
+    margin-left: 1rem;
+  }
+
+
+  .finale{
+    height: 500px;
+  }
+
+
+.video_1 .videoinsert{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
+
+.video_2 .videoinsert{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
+  
+
+@media (max-width: 800px) {
+
+    .video_container{
+  margin: 1rem;
+  
+  }
+}
+  
