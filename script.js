@@ -1,81 +1,67 @@
-
-
-
-const clips = document.querySelectorAll(".videoInsert")
-
-
-
-clips.forEach(clips => {
-    clips.addEventListener("mouseover", playvid);
-    clips.addEventListener("mouseout", stopvid);
+function playPauseVideo() {
+  let videos = document.querySelectorAll(".videoInsert");
+  videos.forEach((video) => {
+    // We can only control playback without insteraction if video is mute
+    video.muted = true;
+    // Play is a promise so we need to check we have it
+    let playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then((_) => {
+        let observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.intersectionRatio !== 1 && !video.paused) {
+                video.pause();
+              } else if (video.paused) {
+                video.play();
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(video);
+      });
+    }
   });
-
-
-function playvid(){
-console.log("video play")
-    this.play()
-}
-function stopvid(){
-    console.log("video pause")
-    this.pause()
 }
 
+// And you would kick this off where appropriate with:
+playPauseVideo();
 
+const arrow1 = document.querySelector(".arrow_down_1");
+const dropdown = document.querySelector(".dropdown_content_1");
 
-const link_arrow = document.querySelector(".link_arrow") 
-
-
-const arrow1 = document.querySelector(".arrow_down_1")
-const dropdown = document.querySelector(".dropdown_content_1")
-
-const display = document.querySelector(".display")
-
+const display = document.querySelector(".display");
 
 arrow1.addEventListener("click", () => {
   dropdown.classList.toggle("hide");
   arrow1.classList.toggle("active_arrow");
+  dropdown2.classList.add("hide");
+  arrow2.classList.remove("active_arrow");
+  dropdown3.classList.add("hide");
+  arrow3.classList.remove("active_arrow");
 });
 
-
-const arrow2 = document.querySelector(".arrow_down_2")
-const dropdown2 = document.querySelector(".dropdown_content_2")
-
-
+const arrow2 = document.querySelector(".arrow_down_2");
+const dropdown2 = document.querySelector(".dropdown_content_2");
 
 arrow2.addEventListener("click", () => {
   dropdown2.classList.toggle("hide");
-  arrow2.classList.toggle("active_arrow")
+  arrow2.classList.toggle("active_arrow");
+  dropdown.classList.add("hide");
+  arrow1.classList.remove("active_arrow");
+  dropdown3.classList.add("hide");
+  arrow3.classList.remove("active_arrow");
 });
 
-const arrow3 = document.querySelector(".arrow_down_3")
-const dropdown3 = document.querySelector(".dropdown_content_3")
-
-
+const arrow3 = document.querySelector(".arrow_down_3");
+const dropdown3 = document.querySelector(".dropdown_content_3");
 
 arrow3.addEventListener("click", () => {
   dropdown3.classList.toggle("hide");
-  arrow3.classList.toggle("active_arrow")
+  arrow3.classList.toggle("active_arrow");
+  dropdown.classList.add("hide");
+  arrow1.classList.remove("active_arrow");
+  dropdown2.classList.add("hide");
+  arrow2.classList.remove("active_arrow");
 });
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
