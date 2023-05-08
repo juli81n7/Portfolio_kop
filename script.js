@@ -30,10 +30,10 @@ playPauseVideo();
 
 const arrow1 = document.querySelector(".arrow_down_1");
 const dropdown = document.querySelector(".dropdown_content_1");
-
+const dropclick1 = document.querySelector(".dropclick1");
 const display = document.querySelector(".display");
 
-arrow1.addEventListener("click", () => {
+dropclick1.addEventListener("click", () => {
   dropdown.classList.toggle("hide");
   arrow1.classList.toggle("active_arrow");
   dropdown2.classList.add("hide");
@@ -44,8 +44,8 @@ arrow1.addEventListener("click", () => {
 
 const arrow2 = document.querySelector(".arrow_down_2");
 const dropdown2 = document.querySelector(".dropdown_content_2");
-
-arrow2.addEventListener("click", () => {
+const dropclick2 = document.querySelector(".dropclick2");
+dropclick2.addEventListener("click", () => {
   dropdown2.classList.toggle("hide");
   arrow2.classList.toggle("active_arrow");
   dropdown.classList.add("hide");
@@ -56,8 +56,9 @@ arrow2.addEventListener("click", () => {
 
 const arrow3 = document.querySelector(".arrow_down_3");
 const dropdown3 = document.querySelector(".dropdown_content_3");
+const dropclick3 = document.querySelector(".dropclick3");
 
-arrow3.addEventListener("click", () => {
+dropclick3.addEventListener("click", () => {
   dropdown3.classList.toggle("hide");
   arrow3.classList.toggle("active_arrow");
   dropdown.classList.add("hide");
